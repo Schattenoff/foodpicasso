@@ -14,5 +14,6 @@ body {
     justify-content: center;
     width: 70vw;
     margin: 0 auto;
+    padding-top: 50px;
     height: 100vh;
 }
