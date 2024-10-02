@@ -17,3 +17,15 @@ body {
     padding-top: 50px;
     height: 100vh;
 }
+
+.wood__logo {
+    width: 100vw;
+    height: 100vh;
+    background: url('../img/logo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hidden {
+    display: none;
+}
