@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Transition</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .logo {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 2s ease-in-out, filter 2s ease-in-out;
+        }
+        .logo.active {
+            opacity: 1;
+            filter: blur(0);
+        }
+        #logo2 {
+            transform: translateY(-20px);
+        }
+    </style>
+</head>
+<body>
+    <img id="logo1" class="logo active" src="foodpicasso.png" alt="Foodpicasso Logo">
+    <img id="logo2" class="logo" src="posterix.png" alt="Posterix Logo">
+
+    <script>
+        let currentLogo = 1;
+        const logo1 = document.getElementById('logo1');
+        const logo2 = document.getElementById('logo2');
+
+        function switchLogos() {
+            if (currentLogo === 1) {
+                logo1.style.filter = 'blur(0)';
+                logo1.classList.add('blurring');
+                setTimeout(() => {
+                    logo1.style.opacity = '0';
+                    logo1.style.filter = 'blur(20px)';
+                }, 1000);
+                setTimeout(() => {
+                    logo1.classList.remove('active');
+                    logo2.classList.add('active');
+                    logo2.style.filter = 'blur(20px)';
+                    setTimeout(() => {
+                        logo2.style.filter = 'blur(0)';
+                        logo2.style.opacity = '1';
+                    }, 500);
+                    currentLogo = 2;
+                }, 2000);
+            } else {
+                logo2.style.filter = 'blur(0)';
+                logo2.classList.add('blurring');
+                setTimeout(() => {
+                    logo2.style.opacity = '0';
+                    logo2.style.filter = 'blur(20px)';
+                }, 1000);
+                setTimeout(() => {
+                    logo2.classList.remove('active');
+                    logo1.classList.add('active');
+                    logo1.style.filter = 'blur(20px)';
+                    setTimeout(() => {
+                        logo1.style.filter = 'blur(0)';
+                        logo1.style.opacity = '1';
+                    }, 500);
+                    currentLogo = 1;
+                }, 2000);
+            }
+        }
+
+        setInterval(switchLogos, 10000);
+    </script>
+</body>
+</html>
