@@ -57,6 +57,6 @@ export default {
 
 .posterix__circle--move {
     color: #3C8AFF;
-    transform: translateX(1.55vw);
+    transform: translateX(4.8%);
 }
 </style>
