@@ -21,11 +21,20 @@ body {
 .wood__logo {
     width: 100vw;
     height: 100vh;
-    background: url('../img/logo.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url("../img/logo.png") center/cover no-repeat;
 }
 
 .hidden {
     display: none;
+}
+
+.page__wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(0, 0, 0, .7);
+    border-radius: 0 0 15px 15px;
+    backdrop-filter: blur(10px);
 }

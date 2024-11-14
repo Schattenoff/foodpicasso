@@ -1,0 +1,51 @@
+html {
+    scroll-behavior: smooth;
+    background: #000;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    overscroll-behavior-y: contain; /* prevent pull-to-refresh */
+    height: 100%;
+}
+
+.app {
+    min-width: 360px;
+    font: 400 16px/1.2 "SF Pro Display", sans-serif;
+    height: 100%;
+}
+
+.app__container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.app__wrapper--anim {
+    animation: blur .9s linear forwards;
+}
+
+@keyframes blur {
+    0% {
+        background: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(0);
+    }
+    50% {
+        background: rgba(0, 0, 0, .4);
+        backdrop-filter: blur(20px);
+    }
+    100% {
+        background: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(0);
+    }
+}
