@@ -1,14 +1,12 @@
 .fade-enter-active,
 .fade-leave-active {
-    transition: all 1s .1s;
+    transition: all 1.4s ease-in-out;
 }
 
 .fade-enter-from,
 .fade-leave-to {
     opacity: 0;
-}
-
-.fade-leave-active,
-.fade-enter-from {
+    filter: blur(30px);
+    color: #000;
     transform: scale(1.5);
 }

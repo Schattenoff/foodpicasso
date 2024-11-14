@@ -17,7 +17,7 @@ export default {
         store.initGlobalState();
         setInterval(() => {
             this.isFp = !this.isFp;
-        }, 5000)
+        }, 30000)
     },
 
     watch: {
@@ -41,9 +41,9 @@ export default {
             <PageFp v-if="isFp"/>
             <PagePosterix v-else/>
         </transition>
-        <div class="app__wrapper"
-             :class="{'app__wrapper--anim': isBlur}"
-             @animationend="onAnimationend()"></div>
+<!--        <div class="app__wrapper"-->
+<!--             :class="{'app__wrapper&#45;&#45;anim': isBlur}"-->
+<!--             @animationend="onAnimationend()"></div>-->
     </div>
 
 </template>

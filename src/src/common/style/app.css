@@ -21,6 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #fff;
 }
 
 .app__wrapper {
@@ -29,23 +30,26 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
+    background: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(20px);
+    opacity: 0;
 }
 
 .app__wrapper--anim {
-    animation: blur .9s linear forwards;
+    animation: blur 1s linear forwards;
 }
 
 @keyframes blur {
     0% {
-        background: rgba(0, 0, 0, 0);
-        backdrop-filter: blur(0);
+        opacity: 0;
     }
-    50% {
-        background: rgba(0, 0, 0, .4);
-        backdrop-filter: blur(20px);
+    40% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
     }
     100% {
-        background: rgba(0, 0, 0, 0);
-        backdrop-filter: blur(0);
+        opacity: 0;
     }
 }

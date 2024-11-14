@@ -149,17 +149,17 @@ const getNestedValue = (res, key) => {
 }
 
 const initGlobalState = () => {
-    if (import.meta.env.DEV) {
-        console.log('todo сходить на сервер за данными');
-        return;
-    }
-    const config = {}
-    try {
-        Object.assign(config, JSON.parse(window.CONFIG));
-    } catch (e) {
-        console.error('config not json');
-    }
-    set({ config });
+    // if (import.meta.env.DEV) {
+    //     console.log('todo сходить на сервер за данными');
+    //     return;
+    // }
+    // const config = {}
+    // try {
+    //     Object.assign(config, JSON.parse(window.CONFIG));
+    // } catch (e) {
+    //     console.error('config not json');
+    // }
+    // set({ config });
 };
 
 const reset = () => {
