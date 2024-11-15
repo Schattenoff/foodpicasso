@@ -8,5 +8,5 @@
     opacity: 0;
     filter: blur(30px);
     color: #000;
-    transform: scale(1.5);
+    /*transform: scale(1.5);*/
 }
